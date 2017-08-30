@@ -51,7 +51,8 @@ COPY ZendFramework-1.12.3.tar.gz /etc/zend/ZendFramework-1.12.3.tar.gz
 RUN tar -xvzf /etc/zend/ZendFramework-1.12.3.tar.gz
 RUN rm -rf /etc/zend/ZendFramework-1.12.3.tar.gz
 COPY php.ini /etc/php5/apache2/php.ini
-COPY .bashrc /root/
+COPY .bashrc /root/.bashrc
+RUN source .bashrc
 COPY run /usr/local/bin/run
 RUN chmod +x /var/www
 RUN chmod +x /usr/local/bin/run
